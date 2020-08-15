@@ -1,4 +1,4 @@
-# LearnHub - Angular Laravel Chain App Example
+# Symfony CLI App Example
 
 ## Get Project Running
 
