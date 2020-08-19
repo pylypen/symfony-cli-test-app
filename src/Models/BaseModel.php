@@ -31,28 +31,6 @@ class BaseModel
     }
 
     /**
-     * Get List
-     *
-     * @return array
-     */
-    public function getList() : array
-    {
-        return $this->getListOfPermissions();
-    }
-
-    /**
-     * Check List Of Permissions
-     *
-     * @param string $permission
-     *
-     * @return bool
-     */
-    public function checkList($permission) : bool
-    {
-        return $this->checkListOfPermissions($permission);
-    }
-
-    /**
      * Activate Permission
      *
      * @param string $permission
@@ -69,7 +47,7 @@ class BaseModel
      *
      * @return array
      */
-    private function getListOfPermissions() : array
+    public function getListOfPermissions() : array
     {
         $list = [];
 
@@ -89,7 +67,7 @@ class BaseModel
      *
      * @return bool
      */
-    private function checkListOfPermissions($permission) : bool
+    public function checkListOfPermissions($permission) : bool
     {
         foreach ($this->list_of_permissions as $key => $val) {
             $clear = strtolower(str_replace(['can', '_'], '', $key));

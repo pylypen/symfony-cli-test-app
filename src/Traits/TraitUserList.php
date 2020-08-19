@@ -20,7 +20,7 @@ trait TraitUserList
     {
         $model = $this->generateModel($user);
 
-        return $model->getList();
+        return $model->getListOfPermissions();
     }
 
     /**
@@ -36,7 +36,7 @@ trait TraitUserList
         $model = $this->generateModel($user);
 
 
-        return $model->checkList($permission) ? 'true' : 'false';
+        return $model->checkListOfPermissions($permission) ? 'true' : 'false';
     }
 
     /**
