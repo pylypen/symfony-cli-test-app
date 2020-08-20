@@ -1,4 +1,6 @@
 <?php
+declare(strict_types=1);
+
 namespace App\Models;
 
 
@@ -37,7 +39,7 @@ class BaseModel
      *
      * @return void
      */
-    protected function activatePermission($permission): void
+    protected function activatePermission(string $permission): void
     {
         $this->$permission = 1;
     }
@@ -67,7 +69,7 @@ class BaseModel
      *
      * @return bool
      */
-    public function checkListOfPermissions($permission) : bool
+    public function checkListOfPermissions(string $permission) : bool
     {
         foreach ($this->list_of_permissions as $key => $val) {
             $clear = strtolower(str_replace(['can', '_'], '', $key));
