@@ -1,4 +1,6 @@
 <?php
+declare(strict_types=1);
+
 namespace App\Commands\UserList;
 
 use Symfony\Component\Console\Command\Command;
